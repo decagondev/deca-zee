@@ -1,6 +1,13 @@
+import sys
+
 class ZMachine:
   def __init__(self, story_file):
-    pass
+    self.memory = bytearray()
+    self.pc = 0
+    self.stack = []
+    self.globals = [0] * 240
+    self.locals = []
+    self.load_story(story_file)
 
 def load_story(self, story_file):
   pass
