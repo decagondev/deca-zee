@@ -29,7 +29,7 @@ def load_story(self, story_file):
 
 def read_byte(self, address):
   """Read a byte from memory."""
-  pass
+  return self.memory[address]
 
 def read_word(self, address):
   """Read a 16-bit word from memory."""
