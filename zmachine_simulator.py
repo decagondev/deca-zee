@@ -33,7 +33,7 @@ def read_byte(self, address):
 
 def read_word(self, address):
   """Read a 16-bit word from memory."""
-  pass
+  return (self.memory[address] << 8) | self.memory[address + 1]
 
 def decode_zscii(self, text_address):
   """Decode ZSCII text to ASCII (Simplified for Version 3)."""
