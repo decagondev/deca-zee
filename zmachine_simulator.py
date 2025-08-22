@@ -19,6 +19,12 @@ def load_story(self, story_file):
     print(f"Error: Story file '{story_file}' not found.")
     sys.exit(1)
 
+  self.version = self.memory[0]
+  
+  if self.version != 3:
+    print(f"Error: Only Z-Machine version 3 is supported, found version {self.version}.")
+    sys.exit(1)
+
 def read_byte(self, address):
   """Read a byte from memory."""
   pass
