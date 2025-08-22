@@ -37,7 +37,19 @@ def read_word(self, address):
 
 def decode_zscii(self, text_address):
   """Decode ZSCII text to ASCII (Simplified for Version 3)."""
-  pass
+  result = ""
+  while True:
+      word = self.read_word(text_address)
+      text_address += 2
+      for shift in [10, 5, 0]:
+          zchar = (word >> shift) & 0x1F
+          if zchar == 0:
+              result += " "
+          elif zchar >= 6:
+              result += chr(zchar + 91)
+      if word & 0x8000:
+          break
+  return result
 
 def run(self):
   """Main interpreter loop."""
