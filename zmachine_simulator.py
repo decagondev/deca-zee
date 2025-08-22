@@ -1,4 +1,5 @@
 import sys
+import struct
 
 class ZMachine:
   def __init__(self, story_file):
@@ -10,21 +11,27 @@ class ZMachine:
     self.load_story(story_file)
 
 def load_story(self, story_file):
+  """Load and validate the .z3 story file."""
   pass
 
 def read_byte(self, address):
+  """Read a byte from memory."""
   pass
 
 def read_word(self, address):
+  """Read a 16-bit word from memory."""
   pass
 
 def decode_zscii(self, text_address):
+  """Decode ZSCII text to ASCII (Simplified for Version 3)."""
   pass
 
 def run(self):
+  """Main interpreter loop."""
   pass
 
 def execute_instruction(self, opcode):
+  """Decode and execute an instruction."""
   pass
 
 
