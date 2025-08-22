@@ -53,7 +53,10 @@ def decode_zscii(self, text_address):
 
 def run(self):
   """Main interpreter loop."""
-  pass
+  while True:
+      opcode = self.read_byte(self.pc)
+      self.pc += 1
+      self.execute_instruction(opcode)
 
 def execute_instruction(self, opcode):
   """Decode and execute an instruction."""
