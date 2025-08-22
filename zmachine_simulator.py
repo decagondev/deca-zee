@@ -25,6 +25,8 @@ def load_story(self, story_file):
     print(f"Error: Only Z-Machine version 3 is supported, found version {self.version}.")
     sys.exit(1)
 
+  self.pc = self.read_word(0x06)
+
 def read_byte(self, address):
   """Read a byte from memory."""
   pass
