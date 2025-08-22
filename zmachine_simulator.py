@@ -12,7 +12,12 @@ class ZMachine:
 
 def load_story(self, story_file):
   """Load and validate the .z3 story file."""
-  pass
+  try:
+    with open(story_file, 'rb') as f:
+      self.memory = bytearray(f.read())
+  except:
+    print(f"Error: Story file '{story_file}' not found.")
+    sys.exit(1)
 
 def read_byte(self, address):
   """Read a byte from memory."""
