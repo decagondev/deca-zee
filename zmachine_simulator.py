@@ -109,7 +109,7 @@ def main():
     sys.exit(1)
 
   simulator = ZMachine(sys.argv[1])
-  simulatr.run()
+  simulator.run()
 
 if __name__ == "__main__":
   main()
